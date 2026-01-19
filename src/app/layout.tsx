@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { siteConfig, ADSENSE_CLIENT_ID } from "@/lib/config";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -78,6 +79,7 @@ export default function RootLayout({
         <Header />
         <main className="min-h-screen">{children}</main>
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
